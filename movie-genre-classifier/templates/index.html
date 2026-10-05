@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Movie Genre Classifier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <main>
+    <h1>What kind of movie is this?</h1>
+    <p class="lede">Paste a plot summary and the model will guess its genre.</p>
+
+    <label for="plot">Plot summary</label>
+    <textarea id="plot" rows="8" maxlength="10000" placeholder="A retired detective is pulled back in when a string of burglaries follows the pattern of his last unsolved case..."></textarea>
+    <div class="row">
+      <span id="count" aria-live="polite">0 words</span>
+      <button type="button" id="sample" class="ghost">Use an example</button>
+      <button type="button" id="go">Predict genre</button>
+    </div>
+
+    <p id="error" role="alert" hidden></p>
+
+    <section id="result" class="ticket" hidden aria-live="polite">
+      <div class="stub">
+        <span class="small">Predicted genre</span>
+        <strong id="genre"></strong>
+        <span id="conf" class="small"></span>
+      </div>
+      <ul id="bars"></ul>
+    </section>
+    <p id="model" class="small"></p>
+  </main>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

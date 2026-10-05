@@ -1,0 +1,36 @@
+{
+  "best_model": "Logistic Regression",
+  "selection_metric": "f1_macro",
+  "results": {
+    "Naive Bayes": {
+      "f1_macro": 0.4734,
+      "f1_weighted": 0.5745,
+      "accuracy": 0.6036
+    },
+    "Logistic Regression": {
+      "f1_macro": 0.582,
+      "f1_weighted": 0.6245,
+      "accuracy": 0.6236
+    },
+    "Linear SVM": {
+      "f1_macro": 0.5624,
+      "f1_weighted": 0.6153,
+      "accuracy": 0.6163
+    }
+  },
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "crime",
+    "drama",
+    "horror",
+    "romance",
+    "sci-fi",
+    "thriller",
+    "western"
+  ],
+  "supports_confidence": true,
+  "train_size": 16427,
+  "test_size": 4107
+}

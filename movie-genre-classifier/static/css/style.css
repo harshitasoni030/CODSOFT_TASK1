@@ -1,0 +1,30 @@
+:root{--bg:#e9eef2;--ink:#14202b;--muted:#5b6b78;--line:#c3cfd8;--card:#fff;--accent:#0f5c78;--accent-ink:#fff;--err:#a3281f}
+@media(prefers-color-scheme:dark){:root{--bg:#10181f;--ink:#e6edf2;--muted:#93a4b1;--line:#2a3a47;--card:#18232c;--accent:#5cc0e0;--accent-ink:#06222c;--err:#ff8a80}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.55 "Bricolage Grotesque",system-ui,sans-serif}
+main{max-width:42rem;margin:0 auto;padding:clamp(1.5rem,6vw,4rem) 1.25rem}
+h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.05;font-weight:800;letter-spacing:-.02em;margin:0 0 .5rem}
+.lede{color:var(--muted);margin:0 0 2rem}
+label{display:block;font-weight:600;margin-bottom:.4rem}
+textarea{width:100%;padding:.85rem 1rem;font:inherit;color:inherit;background:var(--card);border:1.5px solid var(--line);border-radius:6px;resize:vertical}
+textarea:focus,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.row{display:flex;align-items:center;gap:.75rem;margin:.75rem 0 1rem}
+#count{flex:1;color:var(--muted);font-size:.9rem}
+button{font:inherit;font-weight:600;padding:.6rem 1.2rem;border-radius:6px;border:1.5px solid var(--accent);background:var(--accent);color:var(--accent-ink);cursor:pointer}
+button.ghost{background:transparent;color:var(--accent)}
+button:disabled{opacity:.6;cursor:wait}
+#error{color:var(--err);font-weight:600}
+.small{font-size:.85rem;color:var(--muted)}
+.ticket{display:grid;grid-template-columns:11rem 1fr;background:var(--card);border:1.5px solid var(--line);border-radius:8px;margin-top:1.5rem;overflow:hidden}
+.ticket[hidden]{display:none}
+.stub{display:flex;flex-direction:column;justify-content:center;gap:.25rem;padding:1.25rem;border-right:2px dashed var(--line)}
+.stub strong{font-size:1.9rem;font-weight:800;line-height:1.1;text-transform:capitalize;color:var(--accent)}
+#bars{list-style:none;margin:0;padding:1.25rem;display:grid;gap:.6rem;align-content:center}
+#bars li{display:grid;grid-template-columns:6rem 1fr 3rem;align-items:center;gap:.6rem;font-size:.9rem}
+#bars .g{text-transform:capitalize}
+.track{height:.6rem;background:var(--line);border-radius:3px;overflow:hidden}
+.fill{height:100%;background:var(--accent);transition:width .4s ease}
+#bars .p{text-align:right;font-variant-numeric:tabular-nums}
+#model{margin-top:1rem}
+@media(max-width:34rem){.ticket{grid-template-columns:1fr}.stub{border-right:0;border-bottom:2px dashed var(--line)}}
+@media(prefers-reduced-motion:reduce){.fill{transition:none}}
